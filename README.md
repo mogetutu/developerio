@@ -1,5 +1,5 @@
-developerio
-===========
+developer I/O
+=============
 
 ## Cirriculum
     Tools
@@ -80,6 +80,6 @@ developerio
     - Revenue models.
 
 # Trainers
-Charles Kithika - charles@nerd.co.ke @ckithika
+Charles Kithika - charles@node.co.ke @ckithika
 
 Isaak Mogetutu - isaak@mogetutu.com @mogetutu
