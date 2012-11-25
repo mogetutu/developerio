@@ -81,4 +81,5 @@ developerio
 
 # Trainers
 Charles Kithika - charles@nerd.co.ke @ckithika
+
 Isaak Mogetutu - isaak@mogetutu.com @mogetutu
