@@ -58,7 +58,7 @@ developer I/O
     Demo on Amazon
 
 ## Teamwork
-    - Trello
+    - Trello/Asana
 
 ## Databases
     - MySql
