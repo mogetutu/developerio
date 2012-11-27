@@ -1,7 +1,7 @@
 developer I/O
 =============
 
-## Cirriculum
+## Curriculum
     Tools
     - Development environments Windows, Mac OS X, Linux (Ubuntu, CentOS) - Unix System
     - IDEs SublimeText, TextMate : Recommend - Sublime Text
@@ -53,12 +53,13 @@ developer I/O
 ## Domains
     - Registration
     - DNS intodns
+    - Google Apps for Email integration
 
 ## Hosting
     Demo on Amazon
 
 ## Teamwork
-    - Trello
+    - Trello/Asana
 
 ## Databases
     - MySql
