@@ -8,6 +8,13 @@
 <div class="container">
     <div class="row-fluid">
         <div class="page-header"><h2>Day One</h2></div>
+        <?php if ($this->session->flashdata('message')): ?>
+            <div class="alert">
+              <button type="button" class="close" data-dismiss="alert">x</button>
+              <strong>Hey there!</strong> <?=$this->session->flashdata('message')?>
+            </div>
+        <?php endif ?>
+
         <table class='table'>
             <thead>
                 <tr>
