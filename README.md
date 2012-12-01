@@ -40,6 +40,7 @@ developer I/O
 ## Version Control
     - Git
     - Subversion
+    - Git GUI Clients http://windows.github.com/ http://mac.github.com/
 
 ## Mobile
     - iOS
