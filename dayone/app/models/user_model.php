@@ -16,18 +16,27 @@ class User_model extends CI_Model
         return $this->db->get($this->_table)->row();
     }
 
-    public function add()
+    public function add($data=array())
     {
         $this->db->insert($this->_table, $data);
+	return $this->db->insert_id();
     }
 
-    public function update()
+    public function update($id, $data)
     {
-        return true;
+	$this->db->update($this->_table, $data, ['id'=>$id]);
+	return ($this->db->affected_rows()) ? true : false;
     }
 
-    public function delete()
+    public function delete($id)
     {
-        return true;
+	$delete = $this->db->delete($this->_table, ['id' => $id]);
+	// if($delete)
+	// {
+	//     return true;
+	// }
+	// return false;
+	return ($delete) ? true : false;
+
     }
 }
