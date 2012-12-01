@@ -18,28 +18,70 @@ class Users extends CI_Controller {
 
     public function show($id)
     {
-        $data['user'] = $this->user->get($id);
+	$data['user'] = $user = $this->user->get($id);
+	self::check_user($this->user->get($id));
         $this->load->view('users/show', $data);
+
     }
 
     public function create()
     {
-        echo "Load a page with a form to create a user";
+	$this->load->view('users/create');
     }
 
     public function add()
     {
-        echo "Insert a user to the database";
+	// $data = ['name'=>'minneh', 'email'=>'minneh@email.com'];
+	// Grab $_POST variables from the form
+	$data = $this->input->post();
+	if($this->user->add($data))
+	{
+	    redirect('users/index');
+	}
+	else
+	{
+	    redirect('users/create');
+	}
     }
 
-    public function update()
+    public function update($id)
     {
-        echo "Update a user's record";
+	// User model function
+	$data['user'] = $user = $this->user->get($id);
+
+	// Update function
+	if($this->input->post())
+	{
+	    // update user with set id
+	    $update = $this->user->update($id, $this->input->post());
+	    if($update)
+	    {
+		redirect('users/show/' . $id);
+	    }
+	    redirect('users/update/' . $id);
+	}
+	self::check_user($this->user->get($id));
+	$this->load->view('users/update', $data);
     }
 
     public function delete($id)
     {
-        echo "Delete a user from the database";
+	self::check_user($this->user->get($id));
+	if($this->user->delete($id))
+	{
+	    $this->session->set_flashdata('message', 'User has been deleted.');
+	}
+	$this->session->set_flashdata('message', 'User not deleted.');
+	redirect('users');
+    }
+
+    public function check_user($user)
+    {
+	if(!$user)
+	{
+	    $this->session->set_flashdata('message', 'Record doesnt Exist');
+	    redirect('users');
+	}
     }
 
 }
