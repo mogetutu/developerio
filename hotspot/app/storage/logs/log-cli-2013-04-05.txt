@@ -1,0 +1,7 @@
+[2013-04-05 18:43:24] log.ERROR: exception 'InvalidArgumentException' with message 'There are no commands defined in the "generate" namespace.' in /Library/WebServer/Documents/hotspot/vendor/symfony/console/Symfony/Component/Console/Application.php:521
+Stack trace:
+#0 /Library/WebServer/Documents/hotspot/vendor/symfony/console/Symfony/Component/Console/Application.php(554): Symfony\Component\Console\Application->findNamespace('generate')
+#1 /Library/WebServer/Documents/hotspot/vendor/symfony/console/Symfony/Component/Console/Application.php(190): Symfony\Component\Console\Application->find('generate:resour...')
+#2 /Library/WebServer/Documents/hotspot/vendor/symfony/console/Symfony/Component/Console/Application.php(106): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /Library/WebServer/Documents/hotspot/artisan(59): Symfony\Component\Console\Application->run()
+#4 {main} [] []
