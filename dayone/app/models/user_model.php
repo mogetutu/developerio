@@ -1,10 +1,9 @@
 <?php if (! defined('BASEPATH')) exit('No direct script access');
 
-class User_model extends CI_Model
+class User_model extends MY_Model
 {
-    // Define the table
-    protected $_table = 'users';
 
+<<<<<<< HEAD
     public function all_users()
     {
         return $this->db->get($this->_table);
@@ -39,4 +38,6 @@ class User_model extends CI_Model
 	return ($delete) ? true : false;
 
     }
+=======
+>>>>>>> develop
 }
