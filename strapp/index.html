@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Strapp</title>
+    <script src="js/jquery.js"></script>
+    <script src="js/handlebars.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <h3>Minneh Task List App</h3>
+    <ul id="lists">
+    <script id="lists-template" type="text/x-handlebars-template">
+        {{#each this}}
+            <li>
+                <p>{{name}}</p>
+            </li>
+        {{/each}}
+    </script>
+    </ul>
+</body>
+</html>
