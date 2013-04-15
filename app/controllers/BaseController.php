@@ -2,6 +2,11 @@
 
 class BaseController extends Controller {
 
+	public function __construct()
+	{
+		Header('Access-Control-Allow-Origin: *');
+	}
+
 	/**
 	 * Setup the layout used by the controller.
 	 *
