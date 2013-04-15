@@ -1,1 +1,0 @@
-The create.blade.php view.
